@@ -1,0 +1,1 @@
+curl -X PUT -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjM3YWNkMGUzYmZmNjFkZGFjNDMzYjMiLCJpYXQiOjE3MTUxNTYzNDEsImV4cCI6MTcxNTE5MjM0MX0.0pEGy8ktcIt3U5QxUTA10u70O4YyZyJCYY4Wt_YUksc" -H "Content-Type: application/json" http://localhost:8080/meetings/unjoin/663a5f5e360b9714bba4b341 -v
