@@ -9,7 +9,7 @@
     "inspect": "npx tsx --inspect-brk index.ts",
     "test": "npx mocha",
     "test-inspect": "npx mocha --inspect-brk",
-    "populate": "tsx data/populate.ts"
+    "populate": "npx tsx data/populate.ts"
   },
   "keywords": [],
   "author": "",
