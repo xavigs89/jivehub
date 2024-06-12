@@ -122,8 +122,8 @@ function Meeting({ meeting, onJoinClick, unjoinClick, onEditClick, onMeetingDele
 
                         <p className="pb-1 pt-2"><strong>Location: </strong></p>
 
-                        <div className="rounded-xl overflow-hidden">
-                            <MapContainer center={[latitude, longitude]} zoom={16} style={{ height: "200px", width: "100%" }}>
+                        <div className="rounded-xl overflow-hidden z-0">
+                            <MapContainer center={[latitude, longitude]} zoom={16} style={{ height: "200px", width: "100%", zIndex: '0' }}>
                                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                                 <Marker position={[latitude, longitude]}>
                                     <Popup>
@@ -174,7 +174,7 @@ function Meeting({ meeting, onJoinClick, unjoinClick, onEditClick, onMeetingDele
             {showInfo && <img className="w-[206px] h-[160px] flex object-cover justify-end px-2 pt-4" src={meeting.image} alt="meeting image" />}
 
             {showInfo && logic.getLoggedInUserId().userId === meeting.author.id && (
-                <div className="flex justify-end flex-row items-end mt-6 pr-2">
+                <div className="flex justify-end flex-row items-end mt-11 pr-2">
                     <button onClick={() => handleEditClick(meeting)} className="w-5 h-5  "><img src="../../public/icons/VsEditPage.png" alt="edit" /></button>
                     <button onClick={() => handleDeleteClick(meeting.id)} className="ml-2 w-5 h-5"><img src="../../public/icons/BiTrash3.png" alt="delete" /></button>
                 </div>

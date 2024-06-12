@@ -26,6 +26,7 @@ function MeetingsList({ meetings, review, onEditMeetingClick, onJoinMeetingClick
 
     return <div>
         <ul className="mb-100px">
+        {/* flex flex-wrap justify-center */}
             {meetings && meetings.map(meeting =>
                 <Meeting
                     key={meeting.id}
